@@ -1,16 +1,16 @@
 def bubble_sort(arr)
   b = arr.size - 1
-  sorted = false  
-  while !sorted && b.positive? do # we continue the traitement only if the array is not sorted and b>0
+  sorted = false
+  while !sorted && b.positive? # we continue the traitement only if the array is not sorted and b>0
     sorted = true
     0.upto(b - 1) do |i|
-      next arr if arr[i] < arr[i + 1]
-        # switching the order
-        temp = arr[i] # temporary container of arr[i] value
-        arr[i] = arr[i + 1]
-        arr[i + 1] = temp
-        sorted = false # the arr is nom sorted
-        next
+      next arr if arr[i] <= arr[i + 1]
+
+      # switching the order
+      temp = arr[i] # temporary container of arr[i] value
+      arr[i] = arr[i + 1]
+      arr[i + 1] = temp
+      sorted = false # the arr is nom sorted
     end
     b -= 1 # we have the biggest element in place, we go to the next biggest element
     print arr
