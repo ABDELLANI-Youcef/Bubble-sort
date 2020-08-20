@@ -4,7 +4,7 @@ def bubble_sort(arr)
   while !sorted && b.positive? do # we continue the traitement only if the array is not sorted and b>0
     sorted = true
     0.upto(b - 1) do |i|
-      next arr if arr[i] > arr[i + 1]
+      next arr if arr[i] < arr[i + 1]
         # switching the order
         temp = arr[i] # temporary container of arr[i] value
         arr[i] = arr[i + 1]
