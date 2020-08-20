@@ -22,9 +22,9 @@ def bubble_sort_by(arr)
   while !sorted && b.positive?
     sorted = true
     0.upto(b - 1) do |i|
-      if (yield arr[i], arr[i + 1]) > 0
+      if (yield(arr[i], arr[i + 1]) > 0)
         temp = arr[i]
-        arr[i].length = arr[i + 1].length
+        arr[i] = arr[i + 1]
         arr[i + 1] = temp
         sorted = false
       end
@@ -34,6 +34,5 @@ def bubble_sort_by(arr)
   return arr
 end
 
-print bubble_sort_by(["hi","hello","hey"]) do |left,right|
-  left.length - right.length
-end
+
+print bubble_sort_by(["hi","hello","hey"]) { |left,right| left.length - right.length }
