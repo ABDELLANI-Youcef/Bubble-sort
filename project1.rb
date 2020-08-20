@@ -22,11 +22,12 @@ def bubble_sort_by(arr)
   while !sorted && b.positive?
     sorted = true
     0.upto(b - 1) do |i|
-      next arr if (yield(arr[i], arr[i + 1]).negative?)
-        temp = arr[i]
-        arr[i] = arr[i + 1]
-        arr[i + 1] = temp
-        sorted = false
+      next arr if yield(arr[i], arr[i + 1]).negative?
+
+      temp = arr[i]
+      arr[i] = arr[i + 1]
+      arr[i + 1] = temp
+      sorted = false
     end
     b -= 1
   end
