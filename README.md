@@ -1,10 +1,6 @@
 # Bubble Sort
 
-Building an HTML and css page that matches the appearance of this page [TNW](https://thenextweb.com/)
-
-<p align="center">
-  <img src="./img/screenshot.png" width="850" title="Screenshot">
-</p>
+Building two programs which sort arrays using the bubble method and acceting a block.
 
 # Built With
 
